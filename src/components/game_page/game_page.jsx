@@ -29,7 +29,7 @@ function Game_page() {
     const [XCountWins, SetXCountWins] = useState(0)
     const [OCountWins, SetOCountWins] = useState(0)
     const [FinishCount, SetFinishCount] = useState(0)
-    const [BgWinner,SetBgWinner]=useState(new Array(9).fill({bgColor:'',textColor:''}))
+    const [BgWinner, SetBgWinner] = useState(new Array(9).fill({ bgColor: '', textColor: '' }))
 
     /**----------------------------------useEffect----------------------------------------------------*/
     useEffect(() => {
@@ -38,15 +38,15 @@ function Game_page() {
         if (isWinner === true) {
             if (Turn == 'o') {
                 SetXCountWins(XCountWins + 1)
-                SetFinishCount(FinishCount + 1) 
-                const [a,b,c]=WinnerFinshState; 
-                for(let i= 0 ;i<9;i++){
-                    if(i===parseInt(a)||i===parseInt(b)||i===parseInt(c)){
-                        updatedBackgroundClass[i].bgColor='bg-blue';
-                        updatedBackgroundClass[i].textColor='text-light';
+                SetFinishCount(FinishCount + 1)
+                const [a, b, c] = WinnerFinshState;
+                for (let i = 0; i < 9; i++) {
+                    if (i === parseInt(a) || i === parseInt(b) || i === parseInt(c)) {
+                        updatedBackgroundClass[i].bgColor = 'bg-blue';
+                        updatedBackgroundClass[i].textColor = 'text-light';
                     }
-                    else{
-                        updatedBackgroundClass[i]='';
+                    else {
+                        updatedBackgroundClass[i] = '';
                     }
                 }
                 SetBgWinner(updatedBackgroundClass)
@@ -54,16 +54,16 @@ function Game_page() {
             else {
                 SetOCountWins(OCountWins + 1)
                 SetFinishCount(FinishCount + 1)
-                const [a,b,c]=WinnerFinshState; 
-                for(let i= 0 ;i<= 9;++i){
-                    if(i===a||i===b||i===c){
-                        updatedBackgroundClass[i].bgColor='bg-yellow';
-                        updatedBackgroundClass[i].textColor='text-light';
+                const [a, b, c] = WinnerFinshState;
+                for (let i = 0; i <= 9; ++i) {
+                    if (i === a || i === b || i === c) {
+                        updatedBackgroundClass[i].bgColor = 'bg-yellow';
+                        updatedBackgroundClass[i].textColor = 'text-light';
                     }
-                    else{
-                        updatedBackgroundClass[i]='';
+                    else {
+                        updatedBackgroundClass[i] = '';
                     }
-                    
+
                 }
                 SetBgWinner(updatedBackgroundClass)
             }
@@ -76,7 +76,7 @@ function Game_page() {
                 SetFinishCount(FinishCount + 1)
             }
         }
-    }, [ColorClass,isFinish, isWinner, squares])
+    }, [ColorClass, isFinish, isWinner, squares])
 
 
     const handelSquareClick = (Index) => {
