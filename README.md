@@ -5,20 +5,16 @@ This project is a simple Tic-Tac-Toe game implemented using React and Redux.
 ## Table of Contents
 
 - [Description](#description)
-- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
-- [License](#license)
+- [Preview](#preview)
 
 ## Description
 
 The Tic-Tac-Toe game is a classic two-player game where players take turns to place their marks (X or O) on a 3x3 grid. The goal is to be the first to form a horizontal, vertical, or diagonal line of three marks.
 
-## Demo
-
-You can try out a live demo of the Tic-Tac-Toe game [here](link_to_demo).
 
 ## Installation
 
